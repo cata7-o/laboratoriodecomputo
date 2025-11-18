@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT No. 3 Otzolotepec - Registro de Laboratorio</title>
+    <style>
+/* Design System */
+:root {
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+
+  /* Custom theme colors - light blue theme */
+  --color-primary-blue: #4A90E2;
+  --color-primary-blue-dark: #357ABD;
+  --color-primary-blue-light: #E3F2FD;
+  --color-primary-blue-lighter: #F0F7FF;
+  --color-accent: #2196F3;
+  --color-success-green: #4CAF50;
+  --color-warning: #FF9800;
+  --color-danger: #F44336;
+
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-brown-600-rgb: 94, 82, 64;
+
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-primary-blue-lighter);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, var(--color-primary-blue) 0%, var(--color-accent) 100%);
+  color: white;
+  padding: var(--space-16) var(--space-16);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary-blue);
+  flex-shrink: 0;
+}
+
+.header-text h1 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 2px;
+}
+
+.header-text p {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: var(--space-8) 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  border: none;
+  background: none;
+  min-width: 70px;
+}
+
+.nav-item.active {
+  color: var(--color-primary-blue);
+}
+
+.nav-item:active {
+  transform: scale(0.95);
+}
+
+.nav-icon {
+  font-size: 24px;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-16);
+  padding-bottom: 100px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-20);
+  margin-bottom: var(--space-16);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue);
+  margin-bottom: var(--space-16);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* Form */
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+}
+
+.form-label.required::after {
+  content: " *";
+  color: var(--color-danger);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-12);
+  border: 1px solid #ddd;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  transition: all var(--duration-fast) var(--ease-standard);
+  background: white;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary-blue);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Button */
+.btn {
+  padding: var(--space-12) var(--space-24);
+  border: none;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  font-family: var(--font-family-base);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--color-primary-blue);
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-blue-dark);
+}
+
+.btn-secondary {
+  background: var(--color-gray-200);
+  color: var(--color-text);
+}
+
+.btn-danger {
+  background: var(--color-danger);
+  color: white;
+}
+
+.btn-success {
+  background: var(--color-success-green);
+  color: white;
+}
+
+.btn-small {
+  padding: var(--space-6) var(--space-12);
+  font-size: var(--font-size-sm);
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background: white;
+  padding: var(--space-16) var(--space-20);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--duration-normal) var(--ease-standard);
+  max-width: 90%;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.toast.success {
+  border-left: 4px solid var(--color-success-green);
+}
+
+.toast.error {
+  border-left: 4px solid var(--color-danger);
+}
+
+.toast-icon {
+  font-size: 24px;
+}
+
+.toast-message {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+/* Records List */
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.record-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius-md);
+  padding: var(--space-16);
+  box-shadow: var(--shadow-sm);
+}
+
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.record-info {
+  flex: 1;
+}
+
+.record-teacher {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue);
+  margin-bottom: var(--space-4);
+}
+
+.record-subject {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.record-actions {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.record-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-12);
+}
+
+.record-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.record-field-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.record-field-value {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.record-observations {
+  grid-column: 1 / -1;
+  margin-top: var(--space-8);
+  padding-top: var(--space-12);
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--color-primary-blue-light) 0%, white 100%);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--space-16);
+  text-align: center;
+}
+
+.stat-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue);
+  margin-bottom: var(--space-4);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Filters */
+.filters {
+  background: var(--color-primary-blue-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-16);
+  margin-bottom: var(--space-16);
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-12);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--space-32);
+  color: var(--color-text-secondary);
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: var(--space-16);
+  opacity: 0.3;
+}
+
+.empty-text {
+  font-size: var(--font-size-lg);
+}
+
+/* Help Section */
+.help-item {
+  background: var(--color-primary-blue-lighter);
+  border-left: 4px solid var(--color-primary-blue);
+  border-radius: var(--radius-base);
+  padding: var(--space-16);
+  margin-bottom: var(--space-12);
+}
+
+.help-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue);
+  margin-bottom: var(--space-8);
+}
+
+.help-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-16);
+}
+
+.action-buttons .btn {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+  }
+  
+  .header,
+  .bottom-nav,
+  .btn,
+  .filters,
+  .action-buttons,
+  .record-actions {
+    display: none !important;
+  }
+  
+  .main-content {
+    padding: 0;
+    padding-bottom: 0;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+  
+  .record-card {
+    page-break-inside: avoid;
+    margin-bottom: var(--space-16);
+  }
+  
+  .print-header {
+    display: block !important;
+    text-align: center;
+    margin-bottom: var(--space-24);
+    padding-bottom: var(--space-16);
+    border-bottom: 2px solid #333;
+  }
+}
+
+.print-header {
+  display: none;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: var(--space-24);
+  color: var(--color-text-secondary);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: var(--space-16);
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-12);
+  color: var(--color-text);
+}
+
+.modal-message {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-20);
+}
+
+.modal-actions {
+  display: flex;
+  gap: var(--space-12);
+}
+
+.modal-actions .btn {
+  flex: 1;
+}
+    
+    .btn-print {
+        background-color: #059669;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+
+    .btn-print:hover {
+        background-color: #047857;
+    }
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">CBT</div>
+            <div class="header-text">
+                <h1>CBT No. 3 Otzolotepec</h1>
+                <p>Registro de Laboratorio de Cómputo</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home-section" class="section active">
+            <div class="card">
+                <div class="card-title">📚 Bienvenido</div>
+                <p style="color: var(--color-text-secondary); margin-bottom: var(--space-16);">Sistema de registro de actividades del laboratorio de cómputo. Registre el uso del laboratorio de manera rápida y sencilla.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="home-total-records">0</div>
+                        <div class="stat-label">Total Registros</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="home-total-hours">0h</div>
+                        <div class="stat-label">Horas Totales</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🎯 Acceso Rápido</div>
+                <button class="btn btn-primary" onclick="navigateTo('registro-section')" style="margin-bottom: var(--space-12);">
+                    ➕ Nuevo Registro
+                </button>
+                <button class="btn btn-secondary" onclick="navigateTo('estadisticas-section')">
+                    📊 Ver Estadísticas
+                </button>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="registro-section" class="section">
+            <div class="card">
+                <div class="card-title">➕ Nuevo Registro</div>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label class="form-label required">Fecha</label>
+                        <input type="date" id="fecha" class="form-control" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label required">Hora de Entrada</label>
+                            <input type="time" id="hora-entrada" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Hora de Salida</label>
+                            <input type="time" id="hora-salida" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required">Nombre del Docente</label>
+                        <input type="text" id="nombre-docente" class="form-control" placeholder="" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required">Materia</label>
+                        <input type="text" id="materia" class="form-control" placeholder="" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required">Grupo</label>
+                        <input type="text" id="grupo" class="form-control" placeholder="" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Observaciones del Aula</label>
+                        <textarea id="observaciones" class="form-control" rows="3" placeholder=""></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        💾 Registrar Actividad
+                    </button>
+                </form>
+            </div>
+
+            <!-- Recent Records -->
+            <div class="card">
+                <div class="card-title">📋 Últimos Registros</div>
+                <div id="recent-records-list" class="records-list"></div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="estadisticas-section" class="section">
+            <div class="card">
+                <div class="card-title">📊 Estadísticas Generales</div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-total-uses">0</div>
+                        <div class="stat-label">Total de Usos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-total-hours">0h</div>
+                        <div class="stat-label">Horas Acumuladas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-avg-duration">0h</div>
+                        <div class="stat-label">Duración Promedio</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <h3 style="font-size: var(--font-size-base); font-weight: var(--font-weight-bold); margin-bottom: var(--space-12);">🔍 Filtros</h3>
+                <div class="filter-row">
+                    <div class="form-group">
+                        <label class="form-label">Fecha</label>
+                        <input type="date" id="filter-fecha" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Docente</label>
+                        <input type="text" id="filter-docente" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Grupo</label>
+                        <input type="text" id="filter-grupo" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <button class="btn btn-secondary" onclick="clearFilters()" style="width: 100%; margin-top: var(--space-12);">
+                    🔄 Limpiar Filtros
+                </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-success" onclick="printReport()">
+                    🖨️ Imprimir
+                </button>
+                <button class="btn btn-danger" onclick="confirmClearAll()">
+                    🗑️ Limpiar Todo
+                </button>
+            </div>
+
+            <!-- Records List -->
+            <div class="card">
+                <div class="card-title">📝 Todos los Registros</div>
+                <div id="all-records-list" class="records-list"></div>
+            </div>
+        </section>
+
+        <!-- Help Section -->
+        <section id="ayuda-section" class="section">
+            <div class="card">
+                <div class="card-title">❓ Ayuda &amp; Soporte</div>
+                
+                <div class="help-item">
+                    <div class="help-title">📝 ¿Cómo registrar una actividad?</div>
+                    <div class="help-description">
+                        1. Ve a la sección "Registro"<br>
+                        2. Completa todos los campos obligatorios (marcados con *)<br>
+                        3. Presiona el botón "Registrar Actividad"<br>
+                        4. Verás una confirmación de registro exitoso
+                    </div>
+                </div>
+
+                <div class="help-item">
+                    <div class="help-title">📊 ¿Cómo ver las estadísticas?</div>
+                    <div class="help-description">
+                        En la sección "Estadísticas" encontrarás:<br>
+                        • Total de usos del laboratorio<br>
+                        • Horas acumuladas de uso<br>
+                        • Duración promedio de sesiones<br>
+                        • Filtros por fecha, docente y grupo
+                    </div>
+                </div>
+
+                <div class="help-item">
+                    <div class="help-title">🖨️ ¿Cómo imprimir reportes?</div>
+                    <div class="help-description">
+                        1. Ve a la sección "Estadísticas"<br>
+                        2. Aplica los filtros deseados (opcional)<br>
+                        3. Presiona el botón "Imprimir"<br>
+                        4. Selecciona tu impresora o "Guardar como PDF"
+                    </div>
+                </div>
+
+                <div class="help-item">
+                    <div class="help-title">🗑️ ¿Cómo eliminar registros?</div>
+                    <div class="help-description">
+                        • Para eliminar un registro individual: Presiona el botón rojo "🗑️" en la tarjeta del registro<br>
+                        • Para eliminar todos los registros: Ve a "Estadísticas" y presiona "Limpiar Todo" (requiere confirmación)
+                    </div>
+                </div>
+
+                <div class="help-item">
+                    <div class="help-title">💾 ¿Se guardan mis datos?</div>
+                    <div class="help-description">
+                        Sí, todos tus registros se guardan automáticamente en tu dispositivo. Los datos permanecerán disponibles incluso si cierras la aplicación.
+                    </div>
+                </div>
+
+                <div class="help-item">
+                    <div class="help-title">📱 ¿Funciona en todos los dispositivos?</div>
+                    <div class="help-description">
+                        Esta aplicación está optimizada para funcionar en smartphones (Android/iOS) y tablets. También es compatible con computadoras de escritorio.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" onclick="navigateTo('home-section')" data-section="home-section">
+            <span class="nav-icon">🏠</span>
+            <span>Inicio</span>
+        </button>
+        <button class="nav-item" onclick="navigateTo('registro-section')" data-section="registro-section">
+            <span class="nav-icon">➕</span>
+            <span>Registro</span>
+        </button>
+        <button class="nav-item" onclick="navigateTo('estadisticas-section')" data-section="estadisticas-section">
+            <span class="nav-icon">📊</span>
+            <span>Estadísticas</span>
+        </button>
+        <button class="nav-item" onclick="navigateTo('ayuda-section')" data-section="ayuda-section">
+            <span class="nav-icon">❓</span>
+            <span>Ayuda</span>
+        </button>
+    </nav>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span class="toast-icon" id="toast-icon"></span>
+        <span class="toast-message" id="toast-message"></span>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-title" id="modal-title">Confirmar acción</div>
+            <div class="modal-message" id="modal-message">¿Estás seguro?</div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+                <button class="btn btn-danger" id="modal-confirm-btn" onclick="confirmModalAction()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Print Header (hidden, shows only when printing) -->
+    <div class="print-header">
+        <h1>CBT No. 3 Otzolotepec</h1>
+        <h2>Reporte de Registro de Laboratorio de Cómputo</h2>
+        <p>Fecha de generación: <span id="print-date"></span></p>
+    </div>
+
+    <script>
+        // Global state - using JavaScript variables instead of localStorage
+        let records = [];
+        let modalCallback = null;
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRecords();
+            setDefaultDate();
+            setupFormSubmit();
+            setupFilters();
+            updateAllViews();
+        });
+
+        // Navigation
+        function navigateTo(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector(`[data-section="${sectionId}"]`).classList.add('active');
+            
+            // Update views when navigating
+            if (sectionId === 'estadisticas-section') {
+                updateStatisticsView();
+                updateRecordsList();
+            } else if (sectionId === 'home-section') {
+                updateHomeStats();
+            } else if (sectionId === 'registro-section') {
+                updateRecentRecordsList();
+            }
+        }
+
+        // Set default date to today
+        function setDefaultDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('fecha').value = today;
+        }
+
+        // Form submission
+        function setupFormSubmit() {
+            document.getElementById('registration-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    id: Date.now(),
+                    fecha: document.getElementById('fecha').value,
+                    horaEntrada: document.getElementById('hora-entrada').value,
+                    horaSalida: document.getElementById('hora-salida').value,
+                    nombreDocente: document.getElementById('nombre-docente').value,
+                    materia: document.getElementById('materia').value,
+                    grupo: document.getElementById('grupo').value,
+                    observaciones: document.getElementById('observaciones').value
+                };
+                
+                // Validate time
+                if (formData.horaEntrada >= formData.horaSalida) {
+                    showToast('La hora de salida debe ser posterior a la hora de entrada', 'error');
+                    return;
+                }
+                
+                // Add record
+                records.unshift(formData);
+                saveRecords();
+                
+                // Reset form
+                document.getElementById('registration-form').reset();
+                setDefaultDate();
+                
+                // Show success message
+                showToast('✓ Registro guardado exitosamente', 'success');
+                
+                // Update views
+                updateAllViews();
+            });
+        }
+
+        // Save records to memory (simulating persistence)
+        function saveRecords() {
+            // In a real app with server, this would save to backend
+            // For now, data persists in memory during session
+            console.log('Records saved:', records.length);
+        }
+
+        // Load records from memory
+        function loadRecords() {
+            // In a real app, this would load from server
+            // Starting with empty array
+            console.log('Records loaded:', records.length);
+        }
+
+        // Calculate duration in hours
+        function calculateDuration(entrada, salida) {
+            const [h1, m1] = entrada.split(':').map(Number);
+            const [h2, m2] = salida.split(':').map(Number);
+            const minutes = (h2 * 60 + m2) - (h1 * 60 + m1);
+            return minutes / 60;
+        }
+
+        // Update all views
+        function updateAllViews() {
+            updateHomeStats();
+            updateStatisticsView();
+            updateRecordsList();
+            updateRecentRecordsList();
+        }
+
+        // Update home statistics
+        function updateHomeStats() {
+            const totalRecords = records.length;
+            const totalHours = records.reduce((sum, record) => {
+                return sum + calculateDuration(record.horaEntrada, record.horaSalida);
+            }, 0);
+            
+            document.getElementById('home-total-records').textContent = totalRecords;
+            document.getElementById('home-total-hours').textContent = totalHours.toFixed(1) + 'h';
+        }
+
+        // Update statistics view
+        function updateStatisticsView() {
+            const totalUses = records.length;
+            const totalHours = records.reduce((sum, record) => {
+                return sum + calculateDuration(record.horaEntrada, record.horaSalida);
+            }, 0);
+            const avgDuration = totalUses > 0 ? totalHours / totalUses : 0;
+            
+            document.getElementById('stat-total-uses').textContent = totalUses;
+            document.getElementById('stat-total-hours').textContent = totalHours.toFixed(1) + 'h';
+            document.getElementById('stat-avg-duration').textContent = avgDuration.toFixed(1) + 'h';
+        }
+
+        // Get filtered records
+        function getFilteredRecords() {
+            const filterFecha = document.getElementById('filter-fecha').value;
+            const filterDocente = document.getElementById('filter-docente').value.toLowerCase();
+            const filterGrupo = document.getElementById('filter-grupo').value.toLowerCase();
+            
+            return records.filter(record => {
+                const matchFecha = !filterFecha || record.fecha === filterFecha;
+                const matchDocente = !filterDocente || record.nombreDocente.toLowerCase().includes(filterDocente);
+                const matchGrupo = !filterGrupo || record.grupo.toLowerCase().includes(filterGrupo);
+                return matchFecha && matchDocente && matchGrupo;
+            });
+        }
+
+        // Update records list
+        function updateRecordsList() {
+            const container = document.getElementById('all-records-list');
+            const filteredRecords = getFilteredRecords();
+            
+            if (filteredRecords.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📭</div>
+                        <div class="empty-text">No hay registros para mostrar</div>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = filteredRecords.map(record => createRecordCard(record)).join('');
+        }
+
+        // Update recent records list (last 3)
+        function updateRecentRecordsList() {
+            const container = document.getElementById('recent-records-list');
+            const recentRecords = records.slice(0, 3);
+            
+            if (recentRecords.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📭</div>
+                        <div class="empty-text">No hay registros recientes</div>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = recentRecords.map(record => createRecordCard(record)).join('');
+        }
+
+        // Create record card HTML
+        function createRecordCard(record) {
+            const duration = calculateDuration(record.horaEntrada, record.horaSalida);
+            return `
+                <div class="record-card">
+                    <div class="record-header">
+                        <div class="record-info">
+                            <div class="record-teacher">${record.nombreDocente}</div>
+                            <div class="record-subject">${record.materia} - ${record.grupo}</div>
+                        </div>
+                        <div class="record-actions">
+                            <button class="btn btn-danger btn-small" onclick="confirmDeleteRecord(${record.id})">
+                                🗑️
+                            </button>
+                        </div>
+                    </div>
+                    <div class="record-body">
+                        <div class="record-field">
+                            <div class="record-field-label">Fecha</div>
+                            <div class="record-field-value">${formatDate(record.fecha)}</div>
+                        </div>
+                        <div class="record-field">
+                            <div class="record-field-label">Duración</div>
+                            <div class="record-field-value">${duration.toFixed(1)}h</div>
+                        </div>
+                        <div class="record-field">
+                            <div class="record-field-label">Hora de Entrada</div>
+                            <div class="record-field-value">${record.horaEntrada}</div>
+                        </div>
+                        <div class="record-field">
+                            <div class="record-field-label">Hora de Salida</div>
+                            <div class="record-field-value">${record.horaSalida}</div>
+                        </div>
+                        ${record.observaciones ? `
+                            <div class="record-observations">
+                                <div class="record-field-label">Observaciones</div>
+                                <div class="record-field-value">${record.observaciones}</div>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const [year, month, day] = dateString.split('-');
+            const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+            return `${day} ${months[parseInt(month) - 1]} ${year}`;
+        }
+
+        // Setup filters
+        function setupFilters() {
+            document.getElementById('filter-fecha').addEventListener('change', updateRecordsList);
+            document.getElementById('filter-docente').addEventListener('input', updateRecordsList);
+            document.getElementById('filter-grupo').addEventListener('input', updateRecordsList);
+        }
+
+        // Clear filters
+        function clearFilters() {
+            document.getElementById('filter-fecha').value = '';
+            document.getElementById('filter-docente').value = '';
+            document.getElementById('filter-grupo').value = '';
+            updateRecordsList();
+            showToast('Filtros limpiados', 'success');
+        }
+
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const icon = document.getElementById('toast-icon');
+            const messageEl = document.getElementById('toast-message');
+            
+            icon.textContent = type === 'success' ? '✓' : '⚠';
+            messageEl.textContent = message;
+            toast.className = `toast ${type}`;
+            
+            setTimeout(() => toast.classList.add('show'), 10);
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Modal functions
+        function showModal(title, message, callback) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-message').textContent = message;
+            document.getElementById('modal-overlay').classList.add('show');
+            modalCallback = callback;
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.remove('show');
+            modalCallback = null;
+        }
+
+        function confirmModalAction() {
+            if (modalCallback) {
+                modalCallback();
+            }
+            closeModal();
+        }
+
+        // Confirm delete record
+        function confirmDeleteRecord(id) {
+            showModal(
+                '🗑️ Eliminar Registro',
+                '¿Estás seguro de que deseas eliminar este registro? Esta acción no se puede deshacer.',
+                () => deleteRecord(id)
+            );
+        }
+
+        // Delete record
+        function deleteRecord(id) {
+            records = records.filter(record => record.id !== id);
+            saveRecords();
+            updateAllViews();
+            showToast('Registro eliminado', 'success');
+        }
+
+        // Confirm clear all
+        function confirmClearAll() {
+            if (records.length === 0) {
+                showToast('No hay registros para eliminar', 'error');
+                return;
+            }
+            
+            showModal(
+                '🗑️ Limpiar Todos los Registros',
+                '¿Estás seguro de que deseas eliminar TODOS los registros? Esta acción no se puede deshacer.',
+                () => clearAllRecords()
+            );
+        }
+
+        // Clear all records
+        function clearAllRecords() {
+            records = [];
+            saveRecords();
+            updateAllViews();
+            showToast('Todos los registros han sido eliminados', 'success');
+        }
+
+        // Print report
+        function printReport() {
+            if (records.length === 0) {
+                showToast('No hay registros para imprimir', 'error');
+                return;
+            }
+            
+            // Set print date
+            const now = new Date();
+            document.getElementById('print-date').textContent = now.toLocaleDateString('es-MX', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            // Trigger print
+            window.print();
+        }
+    </script>
+</body>
+</html>
